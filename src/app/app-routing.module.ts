@@ -8,3 +8,18 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+const routes: Routes = [
+  {
+	path: '',
+	component: HomeComponent,
+  },
+  {
+	path: 'contact',
+	component: ContactComponent,
+},
+{
+         path: ‘blog’,
+	component: BlogComponent,
+
+}];
