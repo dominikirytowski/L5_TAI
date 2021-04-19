@@ -1,3 +1,8 @@
-<p>blog-item works!</p>
-<blog-item-image [image]="image"></blog-item-image>
-<blog-item-text [text]="text"></blog-item-text>
+<div class="card" style="width: 18rem; margin-top: 30px; margin-left: auto; margin-right: auto">
+  <div class="card-img-top">
+    <blog-item-image [image]="image"></blog-item-image>
+  </div>
+  <div class="card-title">
+    <h5><blog-item-text [text]="text" [id]="id"></blog-item-text></h5>
+  </div>
+</div>

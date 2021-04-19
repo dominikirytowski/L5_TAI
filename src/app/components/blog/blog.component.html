@@ -1,8 +1,8 @@
-<p>blog works!</p>
-<navbar></navbar>
+
+
 <router-outlet></router-outlet>
-<div *ngFor="let item of items$ | filter: filterText">
- <blog-item [image]="item.url" [text]="item.title">
+<div style="margin-right: auto; margin-left: auto" *ngFor="let item of items$ | filter: filterText">
+ <blog-item [id]="item.id" [image]="item.image" [text]="item.title">
 </blog-item>
 </div>
 
