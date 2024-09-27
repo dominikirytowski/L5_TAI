@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+	@Input() filterText: string = "";
+	public items$: any;
 
-  constructor() { }
+  constructor(private service: DataService) { }
 
   ngOnInit(): void {
+	  this.getAll();
   }
+
+   getAll(){
+     this.service.getAll().subscribe((response: any) => {
+       this.items$ = response;
+   })
+   };
+
 
 }
